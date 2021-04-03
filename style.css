@@ -30,3 +30,129 @@
   src: local(""), url("./assets/fonts/roboto/roboto-v20-latin-700.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/roboto/roboto-v20-latin-700.woff2") format("woff2"), url("./assets/fonts/roboto/roboto-v20-latin-700.woff") format("woff"), url("./assets/fonts/roboto/roboto-v20-latin-700.ttf") format("truetype"), url("./assets/fonts/roboto/roboto-v20-latin-700.svg#Roboto") format("svg");
   /* Legacy iOS */
 }
+:root {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Roboto";
+  background-color: #EEEEEE;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+p, span {
+  color: #777777;
+  font-size: 1.4rem;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+a {
+  color: #011F3A;
+  font-size: 1.5rem;
+}
+
+.container {
+  margin: 0 10px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+#bigButton {
+  padding: 15px;
+}
+
+.buttonWhite {
+  border-radius: 40px;
+  color: #011F3A;
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+.buttonBlue {
+  border-radius: 40px;
+  color: #ffffff;
+  background-color: #3D5675;
+  padding: 10px;
+}
+
+#header {
+  padding: 20px;
+  background-color: #ffffff;
+}
+#header .container {
+  display: flex;
+  justify-content: space-between;
+}
+#header .container a:hover {
+  border-bottom: 1px solid #011F3A;
+}
+#header .container img {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: initial;
+  object-fit: contain;
+}
+#header .container ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+}
+#header .container ul li {
+  position: relative;
+  margin: 0 10px;
+}
+#header .container div {
+  display: flex;
+  align-items: center;
+}
+#header .container div a {
+  margin-right: 10px;
+}
+
+.current-page {
+  border-bottom: 1px solid #011F3A;
+}
+
+.current-page::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  left: -20px;
+  position: absolute;
+  display: inline-block;
+  background-size: contain;
+  background-image: url(./assets/images/header/Vector.png);
+}
+
+.product {
+  padding: 15px;
+  background-color: #ffffff;
+}
+.product__info {
+  display: flex;
+  justify-content: space-between;
+}
+.product__info p {
+  width: 70%;
+}
+
+.approved {
+  display: flex;
+  align-items: center;
+}
+.approved span {
+  margin-left: 20px;
+}
+.approved img {
+  margin: inherit;
+}

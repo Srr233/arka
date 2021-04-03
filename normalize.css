@@ -52,13 +52,31 @@ article > * + * {
   margin-top: 1em;
 }
 
+*:focus {
+  outline: none;
+}
+
 input,
 button,
 textarea,
 select {
   font: inherit;
+  border: none;
 }
 
+li {
+  list-style-type: none;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;

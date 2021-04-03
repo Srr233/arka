@@ -40,3 +40,131 @@
        url('./assets/fonts/roboto/roboto-v20-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
        url('./assets/fonts/roboto/roboto-v20-latin-700.svg#Roboto') format('svg'); /* Legacy iOS */
 }
+
+$primary-color1: #ffffff;
+$primary-color2: #011F3A;
+$primary-color3: #3D5675;
+$primary-color4: #EEEEEE;
+$primary-color5: #777777;
+
+@mixin button($color, $backgroundColor, $padding) {
+  border-radius: 40px;
+  color: $color;
+  background-color: $backgroundColor;
+  padding: $padding;
+}
+
+:root {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Roboto';
+  background-color: $primary-color4;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+p, span {
+  color: $primary-color5;
+  font-size: 1.4rem;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+a {
+  color: $primary-color2;
+  font-size: 1.5rem;
+}
+
+.container {
+  margin: 0 10px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+#bigButton {
+  padding: 15px;
+}
+.buttonWhite {
+  @include button($primary-color2, $primary-color1, 10px);
+}
+.buttonBlue {
+  @include button($primary-color1, $primary-color3, 10px);
+}
+
+#header {
+  padding: 20px;
+  background-color: $primary-color1;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    a:hover {
+      border-bottom: 1px solid $primary-color2;
+    }
+    img {
+      width: fit-content;
+      margin: initial;
+      object-fit: contain;
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 50%;
+      li {
+        position: relative;
+        margin: 0 10px;
+      }
+    }
+    div {
+      display: flex;
+      align-items: center;
+      a {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+.current-page {
+  border-bottom: 1px solid $primary-color2;
+}
+.current-page::before {
+  content:"";
+  width: 15px; 
+  height: 15px;
+  left: -20px;
+  position: absolute;
+  display: inline-block;
+  background-size: contain;
+  background-image: url(./assets/images/header/Vector.png);
+}
+.product {
+  padding: 15px;
+  background-color: $primary-color1;
+		&__name {}
+
+		&__info {
+      display: flex;
+      justify-content: space-between;
+      p {
+        width: 70%;
+      }
+    }
+}
+
+.approved {
+  display: flex;
+  align-items: center;
+  span {
+    margin-left: 20px;
+  }
+  img {
+    margin: inherit;
+  }
+}
