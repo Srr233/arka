@@ -39,6 +39,15 @@ body {
   background-color: #EEEEEE;
 }
 
+h1, h2, h3, h4 {
+  color: #011F3A;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 3.5rem;
+}
+
 h3 {
   font-size: 1.8rem;
 }
@@ -46,6 +55,10 @@ h3 {
 p, span {
   color: #777777;
   font-size: 1.4rem;
+}
+
+button {
+  font-size: 1.2rem;
 }
 
 img {
@@ -60,7 +73,7 @@ a {
 }
 
 .container {
-  margin: 0 10px;
+  padding: 0 20px;
   margin: 0 auto;
   max-width: 1200px;
 }
@@ -73,14 +86,16 @@ a {
   border-radius: 40px;
   color: #011F3A;
   background-color: #ffffff;
-  padding: 10px;
+  padding: 10px 20px 10px 20px;
+  letter-spacing: 0.1em;
 }
 
 .buttonBlue {
   border-radius: 40px;
   color: #ffffff;
   background-color: #3D5675;
-  padding: 10px;
+  padding: 10px 20px 10px 20px;
+  letter-spacing: 0.1em;
 }
 
 #header {
@@ -134,16 +149,46 @@ a {
   background-image: url(./assets/images/header/Vector.png);
 }
 
-.product {
-  padding: 15px;
-  background-color: #ffffff;
+.start {
+  display: flex;
+  padding: 80px 0;
+  justify-content: center;
+  background-color: #F2AE4D;
 }
-.product__info {
+.start .container {
   display: flex;
   justify-content: space-between;
 }
-.product__info p {
-  width: 70%;
+.start__info-wrapper {
+  width: 50%;
+  align-self: center;
+}
+.start__info {
+  width: 68%;
+}
+.start__info h1 {
+  margin-bottom: 30px;
+}
+.start__info p {
+  width: 75%;
+  margin-bottom: 10px;
+  color: #011F3A;
+}
+.start__info button {
+  padding: 15px 20px 15px 20px;
+}
+.start__img-container {
+  width: 50%;
+  align-self: center;
+}
+
+.approvals {
+  padding: 5px 0;
+  background-color: #ffffff;
+}
+.approvals .container {
+  display: flex;
+  justify-content: space-between;
 }
 
 .approved {
@@ -155,4 +200,16 @@ a {
 }
 .approved img {
   margin: inherit;
+}
+
+.product {
+  padding: 15px;
+  background-color: #ffffff;
+}
+.product__info {
+  display: flex;
+  justify-content: space-between;
+}
+.product__info p {
+  width: 70%;
 }

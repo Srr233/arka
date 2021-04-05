@@ -46,12 +46,16 @@ $primary-color2: #011F3A;
 $primary-color3: #3D5675;
 $primary-color4: #EEEEEE;
 $primary-color5: #777777;
+$primary-color6: #F2AE4D;
+$primary-color7: #72BDA3;
+$primary-color8: #FFCA3A;
 
-@mixin button($color, $backgroundColor, $padding) {
+@mixin button($color, $backgroundColor, $paddingUp, $paddingSide) {
   border-radius: 40px;
   color: $color;
   background-color: $backgroundColor;
-  padding: $padding;
+  padding: $paddingUp $paddingSide $paddingUp $paddingSide;
+  letter-spacing: .1em;
 }
 
 :root {
@@ -63,12 +67,24 @@ body {
   background-color: $primary-color4;
 }
 
+h1, h2, h3, h4 {
+  color: $primary-color2;
+}
+h1 {
+  font-weight: 400;
+  font-size: 3.5rem;
+}
+
 h3 {
   font-size: 1.8rem;
 }
 p, span {
   color: $primary-color5;
   font-size: 1.4rem;
+}
+
+button {
+  font-size: 1.2rem;
 }
 
 img {
@@ -83,7 +99,7 @@ a {
 }
 
 .container {
-  margin: 0 10px;
+  padding: 0 20px;
   margin: 0 auto;
   max-width: 1200px;
 }
@@ -92,10 +108,10 @@ a {
   padding: 15px;
 }
 .buttonWhite {
-  @include button($primary-color2, $primary-color1, 10px);
+  @include button($primary-color2, $primary-color1, 10px, 20px);
 }
 .buttonBlue {
-  @include button($primary-color1, $primary-color3, 10px);
+  @include button($primary-color1, $primary-color3, 10px, 20px);
 }
 
 #header {
@@ -144,6 +160,59 @@ a {
   background-size: contain;
   background-image: url(./assets/images/header/Vector.png);
 }
+
+.start {
+  display: flex;
+  padding: 80px 0;
+  justify-content: center;
+  background-color: $primary-color6;
+    .container {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__info-wrapper {
+      width: 50%;
+      align-self: center;
+    }
+		&__info {
+      width: 68%;
+      h1 {
+        margin-bottom: 30px;
+      }
+      p {
+        width: 75%;
+        margin-bottom: 10px;
+        color: $primary-color2;
+      }
+      button {
+        padding: 15px 20px 15px 20px;
+      }
+    }
+
+		&__img-container {
+      width: 50%;
+      align-self: center;
+    }
+}
+
+.approvals {
+  padding: 5px 0;
+  background-color: $primary-color1;
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.approved {
+  display: flex;
+  align-items: center;
+  span {
+    margin-left: 20px;
+  }
+  img {
+    margin: inherit;
+  }
+}
 .product {
   padding: 15px;
   background-color: $primary-color1;
@@ -158,13 +227,3 @@ a {
     }
 }
 
-.approved {
-  display: flex;
-  align-items: center;
-  span {
-    margin-left: 20px;
-  }
-  img {
-    margin: inherit;
-  }
-}
