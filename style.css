@@ -54,6 +54,7 @@ h2 {
 }
 
 h3 {
+  font-weight: 400;
   font-size: 1.8rem;
 }
 
@@ -64,6 +65,7 @@ p, span {
 
 button {
   font-size: 1.2rem;
+  display: block;
 }
 
 img {
@@ -238,4 +240,62 @@ a {
 }
 .product__info p {
   width: 70%;
+}
+
+.customs__customs {
+  display: flex;
+  justify-content: space-evenly;
+}
+.customs__customs-container {
+  padding: 40px 0;
+  margin: 80px 0;
+  background-color: #72BDA3;
+}
+.customs__customs-container h2 {
+  text-align: center;
+  margin-bottom: 80px;
+}
+.customs__customs-container button {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+}
+
+.custom {
+  text-align: center;
+}
+.custom p {
+  margin: 0 auto;
+  width: 55%;
+}
+.custom img {
+  width: inherit;
+}
+
+.advantages {
+  margin: 140px 0;
+}
+.advantages .container h2 {
+  font-weight: 700;
+  margin-left: 10%;
+}
+.advantages__advantages {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.advantage {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+}
+.advantage__wapper {
+  text-align: left;
+}
+.advantage__wapper h3 {
+  font-weight: 700;
+}
+.advantage__wapper img {
+  width: inherit;
+  margin: inherit;
 }

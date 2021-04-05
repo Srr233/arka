@@ -49,6 +49,8 @@ $primary-color5: #777777;
 $primary-color6: #F2AE4D;
 $primary-color7: #72BDA3;
 $primary-color8: #FFCA3A;
+$primary-color9: #72BDA3;
+
 
 @mixin button($color, $backgroundColor, $paddingUp, $paddingSide) {
   border-radius: 40px;
@@ -79,6 +81,7 @@ h2 {
   font-size: 2.5rem;
 }
 h3 {
+  font-weight: 400;
   font-size: 1.8rem;
 }
 p, span {
@@ -88,6 +91,7 @@ p, span {
 
 button {
   font-size: 1.2rem;
+  display: block;
 }
 
 img {
@@ -250,4 +254,61 @@ a {
       }
     }
 }
-
+.customs {
+  &__customs {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  &__customs-container {
+    padding: 40px 0;
+    margin: 80px 0;
+    background-color: $primary-color9;
+    h2 {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+    button {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 80px;
+    }
+  }
+}
+.custom {
+  text-align: center;
+  p {
+    margin: 0 auto;
+    width: 55%;
+  }
+  img {
+    width: inherit;
+  }
+}
+.advantages {
+  margin: 140px 0;
+  .container {
+    h2 {
+      font-weight: 700;
+      margin-left: 10%;
+    }
+  }
+  &__advantages {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+.advantage {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  &__wapper {
+    text-align: left;
+    h3 {
+      font-weight: 700;
+    }
+    img {
+      width: inherit;
+      margin: inherit;
+    }
+  }
+}
