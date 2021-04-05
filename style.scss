@@ -74,7 +74,10 @@ h1 {
   font-weight: 400;
   font-size: 3.5rem;
 }
-
+h2 {
+  font-weight: 400;
+  font-size: 2.5rem;
+}
 h3 {
   font-size: 1.8rem;
 }
@@ -213,11 +216,32 @@ a {
     margin: inherit;
   }
 }
+
+.products {
+  &__customize {
+    display: flex;
+    margin: 40px 0;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  &__stock {
+    display: flex;
+    margin: 40px 0;
+    align-items: center;
+    justify-content: center;
+    p {
+      margin-right: 40px;
+    }
+  }
+}
 .product {
+  margin: 2px;
   padding: 15px;
   background-color: $primary-color1;
-		&__name {}
-
 		&__info {
       display: flex;
       justify-content: space-between;
