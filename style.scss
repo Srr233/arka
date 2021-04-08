@@ -50,13 +50,14 @@ $primary-color6: #F2AE4D;
 $primary-color7: #72BDA3;
 $primary-color8: #FFCA3A;
 $primary-color9: #72BDA3;
+$primary-color10: #F2F2F2;
 
 
-@mixin button($color, $backgroundColor, $paddingUp, $paddingSide) {
+@mixin button($color, $backgroundColor, $paddingUp, $paddingRight, $paddingBottom, $paddingLeft) {
   border-radius: 40px;
   color: $color;
   background-color: $backgroundColor;
-  padding: $paddingUp $paddingSide $paddingUp $paddingSide;
+  padding: $paddingUp $paddingRight $paddingBottom $paddingLeft;
   letter-spacing: .1em;
 }
 
@@ -120,10 +121,13 @@ hr {
   padding: 15px;
 }
 .buttonWhite {
-  @include button($primary-color2, $primary-color1, 10px, 20px);
+  @include button($primary-color2, $primary-color1, 13px, 20px, 10px, 20px);
 }
 .buttonBlue {
-  @include button($primary-color1, $primary-color3, 10px, 20px);
+  @include button($primary-color1, $primary-color3, 13px, 20px, 10px, 20px);
+}
+.buttonGrey {
+  @include button($primary-color3, $primary-color10, 8px, 8px, 5px, 8px);
 }
 
 #header {
@@ -346,4 +350,82 @@ hr {
   button {
     margin: 0 auto;
   }
+}
+.merchants {
+  margin: 100px 0;
+  .container:nth-child(1) {
+    text-align: center;
+    h2 {
+      font-weight: 700;
+      margin: 70px 0;
+    }
+  }
+  .container:nth-child(2) {
+    background-color: $primary-color1;
+  }
+  &__merchants {
+    padding: 70px 0;
+  }
+  &__appraisals {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 100px;
+    img {
+      width: inherit;
+    }
+  }
+}
+.row {
+  display: flex;
+  &__images {
+    display: flex;
+    width: 47%;
+    img {
+      width: inherit;
+      margin: inherit;
+    }
+  }
+  &__comment {
+    width: 53%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.comment {
+  margin: 5px;
+  min-width: 27rem;
+  max-width: 30rem;
+  p {
+    color: $primary-color2;
+    font-size: 1.5rem;
+  }
+		&__who {
+      display: flex;
+      justify-content: space-between;
+      img {
+        width: inherit;
+        margin: inherit;
+      }
+    }
+
+    &__button-wrapper {
+      display: flex;
+      button {
+        margin: auto;
+      }
+    }
+
+		&__name-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h3 {
+        font-size: 1.3rem;
+      }
+      p {
+        font-size: 1.1rem;
+        color: $primary-color5;
+      }
+    }
 }

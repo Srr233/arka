@@ -99,7 +99,7 @@ hr {
   border-radius: 40px;
   color: #011F3A;
   background-color: #ffffff;
-  padding: 10px 20px 10px 20px;
+  padding: 13px 20px 10px 20px;
   letter-spacing: 0.1em;
 }
 
@@ -107,7 +107,15 @@ hr {
   border-radius: 40px;
   color: #ffffff;
   background-color: #3D5675;
-  padding: 10px 20px 10px 20px;
+  padding: 13px 20px 10px 20px;
+  letter-spacing: 0.1em;
+}
+
+.buttonGrey {
+  border-radius: 40px;
+  color: #3D5675;
+  background-color: #F2F2F2;
+  padding: 8px 8px 5px 8px;
   letter-spacing: 0.1em;
 }
 
@@ -336,4 +344,83 @@ hr {
 }
 .question button {
   margin: 0 auto;
+}
+
+.merchants {
+  margin: 100px 0;
+}
+.merchants .container:nth-child(1) {
+  text-align: center;
+}
+.merchants .container:nth-child(1) h2 {
+  font-weight: 700;
+  margin: 70px 0;
+}
+.merchants .container:nth-child(2) {
+  background-color: #ffffff;
+}
+.merchants__merchants {
+  padding: 70px 0;
+}
+.merchants__appraisals {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 100px;
+}
+.merchants__appraisals img {
+  width: inherit;
+}
+
+.row {
+  display: flex;
+}
+.row__images {
+  display: flex;
+  width: 47%;
+}
+.row__images img {
+  width: inherit;
+  margin: inherit;
+}
+.row__comment {
+  width: 53%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comment {
+  margin: 5px;
+  min-width: 27rem;
+  max-width: 30rem;
+}
+.comment p {
+  color: #011F3A;
+  font-size: 1.5rem;
+}
+.comment__who {
+  display: flex;
+  justify-content: space-between;
+}
+.comment__who img {
+  width: inherit;
+  margin: inherit;
+}
+.comment__button-wrapper {
+  display: flex;
+}
+.comment__button-wrapper button {
+  margin: auto;
+}
+.comment__name-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.comment__name-block h3 {
+  font-size: 1.3rem;
+}
+.comment__name-block p {
+  font-size: 1.1rem;
+  color: #777777;
 }
