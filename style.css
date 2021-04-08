@@ -96,6 +96,7 @@ hr {
 }
 
 .buttonWhite {
+  transition: 0.2s;
   border-radius: 40px;
   color: #011F3A;
   background-color: #ffffff;
@@ -103,7 +104,14 @@ hr {
   letter-spacing: 0.1em;
 }
 
+.buttonWhite:hover {
+  transition: 0.2s;
+  background-color: #EEEEEE;
+  box-shadow: 0px 0px 44px white;
+}
+
 .buttonBlue {
+  transition: 0.2s;
   border-radius: 40px;
   color: #ffffff;
   background-color: #3D5675;
@@ -111,12 +119,28 @@ hr {
   letter-spacing: 0.1em;
 }
 
+.buttonBlue:hover {
+  transition: 0.2s;
+  background-color: #2F5699;
+}
+
 .buttonGrey {
+  transition: 0.2s;
   border-radius: 40px;
   color: #3D5675;
   background-color: #F2F2F2;
   padding: 8px 8px 5px 8px;
   letter-spacing: 0.1em;
+}
+
+.buttonGrey:hover {
+  transition: 0.2s;
+  box-shadow: 0px 0px 44px rgba(143, 143, 143, 0.25);
+  background-color: #ffffff;
+}
+
+.flexEnd {
+  justify-content: flex-end;
 }
 
 #header {
@@ -209,6 +233,7 @@ hr {
 
 .approvals {
   padding: 5px 0;
+  margin-bottom: 40px;
   background-color: #ffffff;
 }
 .approvals .container {
@@ -227,19 +252,22 @@ hr {
   margin: inherit;
 }
 
+.products {
+  margin-bottom: 80px;
+}
 .products__customize {
   display: flex;
-  margin: 40px 0;
+  margin-bottom: 40px;
   align-items: center;
   justify-content: space-between;
 }
 .products__products {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 40px;
 }
 .products__stock {
   display: flex;
-  margin: 40px 0;
   align-items: center;
   justify-content: center;
 }
@@ -260,13 +288,16 @@ hr {
   width: 70%;
 }
 
+.customs {
+  margin-bottom: 140px;
+}
 .customs__customs {
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 80px;
 }
 .customs__customs-container {
   padding: 40px 0;
-  margin: 80px 0;
   background-color: #72BDA3;
 }
 .customs__customs-container h2 {
@@ -276,7 +307,6 @@ hr {
 .customs__customs-container button {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 80px;
 }
 
 .custom {
@@ -291,7 +321,7 @@ hr {
 }
 
 .advantages {
-  margin: 140px 0;
+  margin-bottom: 140px;
 }
 .advantages .container h2 {
   font-weight: 700;
@@ -319,7 +349,7 @@ hr {
 }
 
 .questions {
-  margin: 140px 0;
+  margin-bottom: 140px;
 }
 .questions__questions {
   display: flex;
@@ -354,7 +384,7 @@ hr {
 }
 .merchants .container:nth-child(1) h2 {
   font-weight: 700;
-  margin: 70px 0;
+  margin-bottom: 80px;
 }
 .merchants__merchants {
   background-color: #ffffff;
@@ -424,7 +454,7 @@ hr {
 }
 
 .letsGo {
-  margin: 100px 0;
+  margin-bottom: 100px;
 }
 .letsGo .container {
   display: flex;
@@ -432,7 +462,7 @@ hr {
   align-items: center;
 }
 .letsGo__go h2 {
-  margin: 50px 0;
+  margin-bottom: 50px;
   text-align: center;
   font-weight: 700;
 }
@@ -444,9 +474,7 @@ hr {
 }
 
 .footer {
-  padding-top: 60px;
-  padding-bottom: 100px;
-  margin-top: 130px;
+  padding: 60px 0;
   background-color: #F2F3F4;
 }
 .footer__footer {
@@ -470,4 +498,10 @@ hr {
   font-size: 1.8rem;
   border-radius: 100px;
   margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    font-size: 8px;
+  }
 }

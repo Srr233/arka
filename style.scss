@@ -52,6 +52,7 @@ $primary-color8: #FFCA3A;
 $primary-color9: #72BDA3;
 $primary-color10: #F2F2F2;
 $primary-color11: #F2F3F4;
+$primary-color12: #2F5699;
 
 
 @mixin button($color, $backgroundColor, $paddingUp, $paddingRight, $paddingBottom, $paddingLeft) {
@@ -122,13 +123,33 @@ hr {
   padding: 15px;
 }
 .buttonWhite {
+  transition: .2s;
   @include button($primary-color2, $primary-color1, 13px, 20px, 10px, 20px);
 }
+.buttonWhite:hover {
+  transition: .2s;
+  background-color: $primary-color4;
+  box-shadow: 0px 0px 44px rgba(255, 255, 255, 1);
+}
 .buttonBlue {
+  transition: .2s;
   @include button($primary-color1, $primary-color3, 13px, 20px, 10px, 20px);
 }
+.buttonBlue:hover {
+  transition: .2s;
+  background-color: $primary-color12;
+}
 .buttonGrey {
+  transition: .2s;
   @include button($primary-color3, $primary-color10, 8px, 8px, 5px, 8px);
+}
+.buttonGrey:hover {
+  transition: .2s;
+  box-shadow: 0px 0px 44px rgba(143, 143, 143, 0.25);
+  background-color: $primary-color1;
+}
+.flexEnd {
+  justify-content: flex-end;
 }
 
 #header {
@@ -216,6 +237,7 @@ hr {
 
 .approvals {
   padding: 5px 0;
+  margin-bottom: 40px;
   background-color: $primary-color1;
   .container {
     display: flex;
@@ -234,19 +256,20 @@ hr {
 }
 
 .products {
+  margin-bottom: 80px;
   &__customize {
     display: flex;
-    margin: 40px 0;
+    margin-bottom: 40px;
     align-items: center;
     justify-content: space-between;
   }
   &__products {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 40px;
   }
   &__stock {
     display: flex;
-    margin: 40px 0;
     align-items: center;
     justify-content: center;
     p {
@@ -267,13 +290,14 @@ hr {
     }
 }
 .customs {
+  margin-bottom: 140px;
   &__customs {
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 80px;
   }
   &__customs-container {
     padding: 40px 0;
-    margin: 80px 0;
     background-color: $primary-color9;
     h2 {
       text-align: center;
@@ -282,7 +306,6 @@ hr {
     button {
       margin-left: auto;
       margin-right: auto;
-      margin-top: 80px;
     }
   }
 }
@@ -297,7 +320,7 @@ hr {
   }
 }
 .advantages {
-  margin: 140px 0;
+  margin-bottom: 140px;
   .container {
     h2 {
       font-weight: 700;
@@ -326,10 +349,7 @@ hr {
 }
 
 .questions {
-  margin: 140px 0;
-  .container {
-  }
-
+  margin-bottom: 140px;
   &__questions {
     display: flex;
     justify-content: center;
@@ -360,7 +380,7 @@ hr {
     text-align: center;
     h2 {
       font-weight: 700;
-      margin: 70px 0;
+      margin-bottom: 80px;
     }
   }
   &__merchants {
@@ -432,7 +452,7 @@ hr {
 }
 
 .letsGo {
-  margin: 100px 0;
+  margin-bottom: 100px;
   .container {
     display: flex;
     justify-content: center;
@@ -440,7 +460,7 @@ hr {
   }
   &__go {
     h2 {
-      margin: 50px 0;
+      margin-bottom: 50px;
       text-align: center;
       font-weight: 700;
     }
@@ -455,9 +475,7 @@ hr {
 }
 
 .footer {
-  padding-top: 60px;
-  padding-bottom: 100px;
-  margin-top: 130px;
+  padding: 60px 0;
   background-color: $primary-color11;
   &__footer {
     display: flex;
@@ -486,5 +504,11 @@ hr {
       border-radius: 100px;
       margin-bottom: 10px;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    font-size: 8px;
   }
 }
