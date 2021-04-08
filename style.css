@@ -424,3 +424,23 @@ hr {
   font-size: 1.1rem;
   color: #777777;
 }
+
+.letsGo {
+  margin: 100px 0;
+}
+.letsGo .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.letsGo__go h2 {
+  margin: 50px 0;
+  text-align: center;
+  font-weight: 700;
+}
+.letsGo__buttons {
+  display: flex;
+}
+.letsGo__buttons button {
+  margin: 0 5px;
+}
