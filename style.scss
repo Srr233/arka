@@ -51,6 +51,7 @@ $primary-color7: #72BDA3;
 $primary-color8: #FFCA3A;
 $primary-color9: #72BDA3;
 $primary-color10: #F2F2F2;
+$primary-color11: #F2F3F4;
 
 
 @mixin button($color, $backgroundColor, $paddingUp, $paddingRight, $paddingBottom, $paddingLeft) {
@@ -75,7 +76,7 @@ h1, h2, h3, h4 {
 }
 h1 {
   font-weight: 400;
-  font-size: 3.5rem;
+  font-size: 4.5rem;
 }
 h2 {
   font-weight: 400;
@@ -193,7 +194,7 @@ hr {
       align-self: center;
     }
 		&__info {
-      width: 68%;
+      width: 88%;
       h1 {
         margin-bottom: 30px;
       }
@@ -327,10 +328,12 @@ hr {
 .questions {
   margin: 140px 0;
   .container {
+  }
+
+  &__questions {
     display: flex;
     justify-content: center;
     background-color: $primary-color8;
-
     padding: 100px 0;
   }
 }
@@ -360,11 +363,9 @@ hr {
       margin: 70px 0;
     }
   }
-  .container:nth-child(2) {
-    background-color: $primary-color1;
-  }
   &__merchants {
-    padding: 70px 0;
+    background-color: $primary-color1;
+    padding: 70px 0 0 0;
   }
   &__appraisals {
     display: flex;
@@ -449,6 +450,41 @@ hr {
     display: flex;
     button {
       margin: 0 5px;
+    }
+  }
+}
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 100px;
+  margin-top: 130px;
+  background-color: $primary-color11;
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__links {
+    li {
+      margin: 10px 0;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    justify-content: space-between;
+    max-width: 60%;
+  }
+
+  &__email {
+    h3 {
+      margin-bottom: 10px;
+    }
+    input {
+      width: 95%;
+      padding: 5px 5%;
+      font-size: 1.8rem;
+      border-radius: 100px;
+      margin-bottom: 10px;
     }
   }
 }
