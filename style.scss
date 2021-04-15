@@ -433,8 +433,9 @@ hr {
     display: flex;
     width: 47%;
     img {
-      width: inherit;
+      width: 50%;
       margin: inherit;
+      object-fit: contain;
     }
   }
   &__comment {
@@ -511,6 +512,9 @@ hr {
   &__footer {
     display: flex;
     justify-content: space-between;
+    div {
+      margin: 0 10px;
+    }
   }
   &__links {
     li {
@@ -540,7 +544,10 @@ hr {
 
 @media (max-width: 945px) {
   :root {
-    font-size: 8px;
+    font-size:9px;
+  }
+  h1 {
+    font-size: 4rem;
   }
   #header {
     .hamburger-menu {
@@ -590,5 +597,50 @@ hr {
         }
       }
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__footer {
+    div:nth-child(1) {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .start__info-wrapper {
+    width: 100%;
+  }
+  .start__img-container {
+    display: none;
+  }
+  .products__products {
+    grid-template-columns: 1fr 1fr;
+  }
+  .product:nth-child(5) {
+    display: none;
+  }
+  .product:nth-child(6) {
+    display: none;
+  }
+
+  .approved {
+    span {
+      display: none;
+    }
+  }
+  .merchants__merchants {
+    padding: 0;
+  }
+  .merchants__appraisals {
+    display: none;
+  }
+
+  .row__images img {
+    width: 100%;
+  }
+  .row__images img:nth-child(odd) {
+    display: none;
   }
 }
